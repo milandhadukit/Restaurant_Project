@@ -1,12 +1,5 @@
 {{-- @extends('layouts.Admin_master') --}}
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-</head>
-
 <body>
 
     <!--  wrapper -->
@@ -37,58 +30,6 @@
                     {{-- <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
                 </a> --}}
-                    <!-- dropdown-messages -->
-                    <ul class="dropdown-menu dropdown-messages">
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-danger">Andrew Smith</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consecte
-
-                                    tur adipiscing elit. Pellentesque eleifend...</div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-info">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="#">
-                                <div>
-                                    <strong><span class=" label label-success">Jonney Depp</span></strong>
-                                    <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
-                                </div>
-                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...
-                                </div>
-                            </a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a class="text-center" href="#">
-                                <strong>Read All Messages</strong>
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- end dropdown-messages -->
-                </li>
-
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -124,28 +65,74 @@
 
 
                     <li class="selected">
-                        <a href="#"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                        <a href="{{ route('home') }}"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Category
-                            {{-- <span class="fa arrow"></span> --}}
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Food Category
+                            <span class="fa arrow"></span>
                         </a>
-                       
+                        <ul class="nav nav-second-level">
+
+                            <li>
+                                <a href="{{ route('add-categories') }}"> -> Add Food Category</a>
+                            </li>
+
+                            <li>
+                                <a href="{{ route('view-categories') }}"> -> View Food Category</a>
+                            </li>
+
+
+                        </ul>
+
                         <!-- second-level-items -->
                     </li>
 
                     <li>
-                        <a href="#"><i class="fa fa-list-alt"></i> Item
-                          </a>
+                        <a href="#"><i class="fa fa-list-alt"></i> Food Item
+                            <span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
+                            <li>
+                                <a href="{{ route('add-items') }}"> -> Add Food Item</a>
+                            </li>
 
-                           
+                            <li>
+                                <a href="{{ route('view-items') }}"> -> View Food Item</a>
+                            </li>
+
                         </ul>
                     </li>
 
                     <li>
-                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Reservation Tables</a>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables
+                            <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route('add-table') }}"> -> Add Table Details</a>
+                                </li>
+    
+                                <li>
+                                    <a href="{{ route('view-table') }}"> -> View Table Details</a>
+                                </li>
+    
+                            </ul>
                     </li>
+
+
+                    <li>
+                        <a href="tables.html"><i class="fa fa-table fa-fw"></i> Reservation Tables
+                            <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="{{ route('add-table') }}"> -> Book Table</a>
+                                </li>
+    
+                                <li>
+                                    <a href="{{ route('view-table') }}"> -> View Table Details</a>
+                                </li>
+    
+                            </ul>
+                    </li>
+
 
                     <li>
                         <a href="forms.html"><i class="fa fa-edit fa-fw"></i> About us</a>
@@ -168,13 +155,6 @@
 
                         </ul>
                     </li>
-                    {{-- 
-                    <li>
-                    
-                        @if (Route::has('register'))
-                        <a href="{{ route('register') }}"> <i class="fa fa-edit fa-fw"></i>Register</a>
-                        @endif
-                    </li> --}}
 
 
                     <!-- second-level-items -->
@@ -186,20 +166,7 @@
         </nav>
         <!-- end navbar side -->
 
-
-
-
-
-
-
-
-
-
-
-
     </div>
     <!-- end wrapper -->
 
 </body>
-
-</html>
